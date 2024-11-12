@@ -19,3 +19,11 @@
  </insert>
 -->
 
+<mapper namespace="com.green.board2.BoardMapper">
+    <insert id="insBoard">
+        INSERT INTO board
+        SET title = #{title}
+        , contents = #{contents}
+        , writer = #{writer}
+    </insert>>
+</mapper>
