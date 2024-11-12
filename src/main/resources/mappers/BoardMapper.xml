@@ -13,17 +13,16 @@
  <태그명></태그명> or <태그명 /> 태그를 사용할 수 있다.태그 이름과 속성값은 어떻게 처리할지 약속되어 있다.
  그 약속은 플랫폼마다 모두 다르다. 참고로 안드로이드에서는 화면은 xml파일로 구현한다.
  <mapper namespace="연결할 interface full path">
-
- <insert id="연결할 메소드명">
-    insert 쿼리문 작성
- </insert>
+    <insert id="연결할 메소드명">
+        insert 쿼리문 작성
+    </insert>
 -->
 
 <mapper namespace="com.green.board2.BoardMapper">
     <insert id="insBoard">
         INSERT INTO board
         SET title = #{title}
-        , contents = #{contents}
-        , writer = #{writer}
+            ,contents = #{contents}
+            ,writer = #{writer}
     </insert>>
 </mapper>
