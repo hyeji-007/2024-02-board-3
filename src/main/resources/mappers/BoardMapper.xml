@@ -58,6 +58,6 @@
         DELETE FROM board
         WHERE board_id = #{boardId}
         AND writer = #{writer}
-    </delete>>
+    </delete>
 
 </mapper>
