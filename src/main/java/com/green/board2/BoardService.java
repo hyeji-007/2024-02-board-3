@@ -1,8 +1,12 @@
 package com.green.board2;
 
-import com.green.board2.model.BoardInsReq;
+import com.green.board2.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 /*
     @Service - 빈 등록(스프링에게 객체 생성을 대신 부탁하는 것)
@@ -21,5 +25,21 @@ public class BoardService {
 
     public int insBoard(BoardInsReq p) {
         return mapper.insBoard(p);
+    }
+
+    public List<BoardSelRes> selBoardList() {
+        return mapper.selBoardList();
+    }
+
+    public BoardSelOneRes selBoardOne(int p) {
+        return mapper.selBoardOne(p);
+    }
+
+    public int updBoard(BoardUpdReq p) {
+        return mapper.updBoard(p);
+    }
+
+    public int delBoard(BoardDelReq p) {
+        return mapper.delBoard(p);
     }
 }
